@@ -1,10 +1,11 @@
-# Hiring-Coders-3
+# Hiring-Coders-3  :computer:
 
 
-Neste repositório estão as atividades realizadas durante o curso Hiring-Coders-3 pela Gama Academy.
+Neste repositório estão as atividades realizadas durante o curso **Hiring-Coders-3** pela **_Gama Academy_**.
 
-## Conteúdo
+## Semana/Conteúdo :mortar_board:
 
-1. Html
-2. Estutura de dados
-3. Css
+Semana | Conteúdo
+-------| ----------------------------
+Semana 0  |  Html - Estutura de dados - Css - Testes
+Semana 1  |  Lógica de Programação - Git
