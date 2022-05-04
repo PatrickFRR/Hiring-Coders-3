@@ -1,0 +1,48 @@
+/* O * seleciona todos os elementos do texto html */
+
+* {
+    color: blue;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* #primeiro {
+    border: 1px solid green;
+    margin: 30px;
+}
+
+.segundo {
+    border: 5px solid black;
+    padding: 15px;
+} */
+nav span {
+    color: indigo;
+    cursor: pointer;
+     transition: 300ms;
+}
+
+/* :hover serve para introduzir um tipo de animacao */
+nav span:hover {
+    text-decoration: underline;
+    color: black;
+    background-color: pink;
+}
+
+/* Concatenando Id com Classe */
+#primeiro,
+.segundo {
+    border: 5px solid black;
+    padding: 15px;
+    margin: 5px;
+}
+
+/* > que é utilizado para localizar o nível hierarquico mais alto */
+.segundo > p {
+    color: aquamarine;
+}
+
+/* !importat é um seletor absoluto, usar com cuidado*/
+.segundo > div {
+    display: block !important;
+}

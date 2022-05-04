@@ -1,0 +1,13 @@
+body{                
+    color:red;
+}
+
+li{
+    text-decoration: underline;
+    color:blue;
+}
+
+ul{
+    border: 1px solid black;
+}
+  
