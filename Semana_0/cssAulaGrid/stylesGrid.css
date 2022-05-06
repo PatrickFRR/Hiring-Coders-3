@@ -1,0 +1,32 @@
+*{
+    margin: e;
+    padding: 0;
+}
+
+.grid{
+    display: grid;
+/* O grid-tamplate-rows altera o tamanho da linha, no exemplo abaixo cada um ficou de um tamanho*/
+    /* grid-template-rows: 25px 50px 100px 200px; */
+/* Para que todos fiquem do mesmo tamanho usamos repet(numero de linhas, tamanho) */
+    /* grid-template-rows: repeat(4, 100px); */
+/* também podemos fazer assim: */
+    /* grid-template-rows: 25px 50px repeat(2, 100px); */
+/* As frações são calculadas pelo próprio CSS */
+    grid-template-rows: 1fr 2fr 1fr 3fr;
+/*O grid-tamplate-columns altera o tamanho da coluna, e funciona como o rows */
+    /* grid-template-columns: 90px 15px repeat(2, 100px); */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+    row-gap: 30px;
+}
+
+/* Alterando itens de lugar */
+.gray {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.grid div{
+    padding: 30px;
+}
