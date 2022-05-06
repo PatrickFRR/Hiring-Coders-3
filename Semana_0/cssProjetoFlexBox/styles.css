@@ -37,6 +37,7 @@ header ul {
 
 .container {
     text-align: center;
+    align-items: center;
     line-height: 1.2;
 }
 
@@ -47,9 +48,29 @@ header ul {
     font-size: 35px;
 }
 
- #arrow {
-    width: 10%;
+#arrow { 
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
 
+@keyframes blink {
+    to{
+        visibility: hidden;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+#animation {
+    transition: 300ms;
+}
+
+.active{
+    display: block !important;
 }
 
 #about p {
@@ -67,12 +88,31 @@ header ul {
 
 .form input {
     width: 60%;
+    padding: 4px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    margin-top: 5px;
 }
 
 .form button {
-    width: 20%;
-    color:black;
+    width: 25%;
+    padding: 5px 8px;
+    background:linear-gradient(to right, gray 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #fafafa;
+    font-weight: 600;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    transition: all 300ms ease-out;
 }
+
+.form button:hover {
+    background-position:left bottom;
+    color: rgb(14, 14, 14);
+}
+
 .flex {
     display: flex;
     justify-content: center;
