@@ -9,4 +9,4 @@ Semana | Conteúdo
 -------| ----------------------------
 [Semana 0](https://github.com/PatrickFRR/Hiring-Coders-3/tree/main/Semana_0)  |  Html - Estutura de dados - CSS - BootStrap
 [Semana 1](https://github.com/PatrickFRR/Hiring-Coders-3/tree/main/Semana_1)  |  Lógica de Programação 
-[Semana 2] | JavaScript Básico - Práticas - Intermediário - Typescript
+[Semana 2](https://github.com/PatrickFRR/Hiring-Coders-3/tree/main/Semana_2)| JavaScript Básico - Práticas - Intermediário - Typescript
