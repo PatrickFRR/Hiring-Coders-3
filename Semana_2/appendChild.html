@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Básico</title>
+</head>
+
+<body>
+    <h1>JavaScript Básico</h1>
+
+    <script>
+        var elemento_pai = document.body;
+        var titulo = document.createElement('h1');
+        // Criar o nó de texto
+        var texto = document.createTextNode("Um Novo Título");
+        // Anexar o nó de texto ao elemento h1
+        titulo.appendChild(texto);
+        elemento_pai.appendChild(titulo);
+    </script>
+
+</body>
+</html>
