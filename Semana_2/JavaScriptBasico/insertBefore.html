@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Básico</title>
+</head>
+
+<body>
+    <h1>JavaScript Básico</h1>
+
+    <ul>
+        <li>primeiro item</li>
+        <li>segundo item</li>
+        <li>quarto item</li>
+    </ul>
+    <script>
+        // Criando o terceiro elemento
+        var novoElem = document.createElement('li');
+        var texto = document.createTextNode('terceiro item');
+        novoElem.appendChild(texto);
+        // Recuperando a lista
+        var lista = document.getElementsByTagName('ul')[0];
+        // Recuperando os itens
+        var itens = document.getElementsByTagName('li');
+        // Inserindo com insertBefore()
+        lista.insertBefore(novoElem, itens[0]);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="./título.png" class="img-fluid" alt="title">
+                </div>
+            </div>
+        </div>
+        <div class="container subtitle">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="text-center display-5">Minha Realidade</h2>
+                    <hr>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="text-center display-5">Meu Ideal</h2>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="container calculator" id="form">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="text-center">Calculadora de IMC</h3>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="text-center">Calculadora de Peso</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container form">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon display-6" id="sizing-addon1">Peso</span>
+                                <input type="text" class="form-control" placeholder="Digite o seu peso aqui..."
+                                    aria-describedby="sizing-addon1" id="peso_digitado">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon display-6" id="sizing-addon1">IMC</span>
+                                <input type="text" class="form-control" placeholder="Digite o seu IMC aqui..."
+                                    aria-describedby="sizing-addon1" id="imc_digitado">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container form">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon display-6" id="sizing-addon1">Altura</span>
+                                <input type="text" class="form-control" placeholder="Digite a sua altura aqui..."
+                                    aria-describedby="sizing-addon1" id="altura_digitada1">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon display-6" id="sizing-addon1">Altura</span>
+                                <input type="text" class="form-control" placeholder="Digite a sua altura aqui..."
+                                    aria-describedby="sizing-addon1" id="altura_digitada2">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container form">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon display-6" id="sizing-addon1">IMC</span>
+                                <input type="text" class="form-control" disabled="disabled"
+                                    aria-describedby="sizing-addon1" id="imc_resultado">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info" onclick="validacao()">Calcular</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon display-6" id="sizing-addon1">Peso</span>
+                                <input type="text" class="form-control" disabled="disabled"
+                                    aria-describedby="sizing-addon1" id="peso_resultado">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info" onclick="validacao()">Calcular</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="m3" class="alert alert-danger text-center" role="alert">
+        MAGREZA GRAU 3: é uma condição que pode ser causada por desnutrição severa. Assim, consulte
+        um médico, pois esse peso é uma ameaça à saúde.
+    </div>
+    <div id="m2" class="alert alert-danger text-center" role="alert">
+        MAGREZA GRAU 2: Condições hormonais, como o hipertireoidismo, podem afetar o peso de uma pessoa, além de
+        parasitas ou simplesmente uma dieta com poucas calorias diárias. Nesse sentido, você pode consultar um médico
+        para ter certeza de que não tem nada de errado.
+    </div>
+    <div id="m1" class="alert alert-warning text-center" role="alert">
+        MAGREZA GRAU 1: Pode ter algumas consequências, mas no geral não é preocupante.
+    </div>
+    <div id="s" class="alert alert-success text-center" role="alert">
+        SAUDÁVEL: Essa classificação garante um risco menor para diversas doenças que variam de anemia a infarto. Estar
+        nessa classificação é estar no peso ideal para seu corpo, mas é bom lembrar de verificar a circunferência da
+        cintura em busca de excesso de gordura.
+        Mas, para mulheres, a cintura deve ter até 80 cm. Para homens, até 94 cm.
+    </div>
+    <div id="po" class="alert alert-info text-center" role="alert">
+        PRÉ-OBSIDADE: O sobrepeso pode causar alguns problemas de circulação no corpo, além de fadiga, mas assim como a
+        magreza leve, se o IMC estiver pouco acima de 25, não é preocupante. Ou seja, uma dieta com um pouco menos de
+        calorias ou um pouco mais de exercícios na rotina pode resolver a situação.
+    </div>
+    <div id="o1"class="alert alert-warning text-center" role="alert">
+        OBESIDADE GRAU 1: O risco de desenvolver diabetes, para quem está nesta faixa de peso, é de 20%, e o de
+        hipertensão ultrapassa 25%. Há risco maior de outras doenças cardiovasculares, articulares, distúrbios
+        psiquiátricos, apneia do sono e até certos tipos de câncer. É importante rever seus hábitos alimentares, iniciar
+        atividade física regular. Apesar de estar acima do peso você tem uma boa chance de ter uma vida saudável ao
+        fazer pequenas modificações no seu estilo de vida.
+    </div>
+    <div id="o2" class="alert alert-danger text-center" role="alert">
+        OBESIDADE GRAU 2: O risco calculado de desenvolver diabetes chega a 40%, e a chance de surgirem doenças
+        associadas à obesidade, como reumatismos, câncer, apneia do sono, hipertensão e outros problemas
+        cardiovasculares pode chegar a 50%.
+    </div>
+    <div id="o3" class="alert alert-danger text-center" role="alert">
+        OBESIDADE GRAU 3: Se este é o resultado, o risco de desenvolver doenças associadas ao excesso de peso, como a
+        síndrome metabólica, reumatismos, câncer, apneia do sono, hipertensão e outros problemas cardiovasculares chega
+        a até 90%. Nesse estágio, a cirurgia de redução do estômago pode ser indicada. Procure orientação médica
+        imediatamente.
+    </div>
+
+    <div class="card-group">
+        <div class="card text-center">
+            <img src="./cenoura.jpg" class="card-img-top" alt="cenoura">
+            <div class="card-body">
+                <h5 class="card-title">Seu problema é o peso?</h5>
+                <p class="card-text">Dieta. Exercícios. Funcional. Práticas deportivas. E, muito mais!</p>
+                <a class="ioshi" href="https://www.linkedin.com/in/washington-key-simas-609193151/">Follow me!</a>
+                <p class="card-text"><small class="text-muted">Especialista Washington key Simas</small></p>
+            </div>
+        </div>
+        <div class="card text-center">
+            <img src="./toledo.jpg" class="card-img-top" alt="toledo">
+            <div class="card-body">
+                <h5 class="card-title">Balanças Toledo</h5>
+                <p class="card-text">Aqui seu peso conta muito!!</p>
+                <a href="https://www.linkedin.com/in/fernando-lorena-2a906b20b/">Clique aqui!</a>
+                <p class="card-text"><small class="text-muted">Responsável técnico Fernando Lorena</small></p>
+            </div>
+        </div>
+        <div class="card text-center">
+            <img src="./pneu.jpg" class="card-img-top" alt="pneu">
+            <div class="card-body">
+                <h5 class="card-title">Jean Pneus & Rodas</h5>
+                <p class="card-text">Livra-se desse pneuzinho ... Só as melhores marcas!! </p>
+                <a href="https://www.linkedin.com/in/jean-carlo-andrade-52aa71199/">Desapegue!!</a>
+                <p class="card-text"><small class="text-muted">Especialista Jean Carlo Andrade</small></p>
+            </div>
+        </div>
+        <div class="card text-center">
+            <img src="./fome.jpg" class="card-img-top" alt="fome">
+            <div class="card-body">
+                <h5 class="card-title">Terapia Mañgiñèlli</h5>
+                <p class="card-text">Sua vida, suas regras! Aqui ajudamos a escolher o que é melhor para você.</p>
+                <a href="https://www.linkedin.com/in/jean-carlo-andrade-52aa71199/">Escolha aqui!!</a>
+                <p class="card-text"><small class="text-muted">Responsável social Francieli Mañgiñèlli </small></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

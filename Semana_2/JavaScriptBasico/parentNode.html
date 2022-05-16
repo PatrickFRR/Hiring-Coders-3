@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Básico</title>
+    <script>
+        function primeiroElemento() {
+            var elemento = document.getElementById("item1").parentNode.nodeName;
+            alert(elemento);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>JavaScript Básico</h1>
+
+    <ul id="info">
+        <li id="item1">Monitor</li>
+        <li id="item2">Mouse</li>
+        <li id="item3">Teclado</li>
+        <li id="item4">Impressora</li>
+    </ul>
+
+    <button onclick="primeiroElemento()">Elemento Pai</button>
+
+</body>
+
+</html>
